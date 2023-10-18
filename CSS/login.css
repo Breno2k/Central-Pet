@@ -13,6 +13,10 @@ body {
     justify-content: center;
 }
 
+nav img {
+    width: 5rem;
+}
+
 header {
     position: fixed;
     top: 0;
