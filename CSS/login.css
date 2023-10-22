@@ -1,16 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Castoro&family=Palanquin:wght@300&family=Patua+One&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Castoro", serif;
 }
 
 body {
-    background-color: #401A74;
+    background-color: #241337;
     text-align: center;
     display: flex;
     align-items: center;
     min-height: 100vh;
     justify-content: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 16vh;
+}
+
+nav p {
+    color: #ffffff;
+    font-size: 2rem;
+    font-family: "Patua one", serif;
 }
 
 nav img {
@@ -65,7 +81,7 @@ header {
     width: 250px;
     height: 100%;
     border-radius: 50px;
-    background-color: #FFADCA;
+    background-color: #6731b3;
     border: none;
     outline: none;
     font-size: 16px;
@@ -88,19 +104,20 @@ header {
 .login .btn {
     width: 100%;
     height: 45px;
-    background-color: #401A74;
+    background-color: #ffdb53;
     border: none;
     outline: none;
     border-radius: 50px;
     cursor: pointer;
     font-size: 16px;
-    color: white;
+    color: black;
     font-weight: 600;
     margin-bottom: 20px;
 }
 
 .login .btn:hover {
-    background-color: #5d4c74;
+    color: #ffdb53;
+    background-color: black;
 }
 
 .register {
@@ -122,5 +139,4 @@ header {
 /* Ocultar o "olho" no campo de senha */
 input[type="password"]::-webkit-password-reveal-button {
     display: none;
-  }
-  
+}
