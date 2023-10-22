@@ -1,115 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Castoro&family=Palanquin:wght@300&family=Patua+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Castoro&family=Palanquin:wght@300&family=Patua+One&display=swap");
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Castoro', serif;
+    font-family: "Castoro", serif;
 }
+
 nav {
     background-color: #241337;
-    display: flex;  
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 16vh;   
+    height: 16vh;
 }
+
 nav img {
-    width: 5rem;
+    width: 70px;
 }
+
 .primeiraSeçaoHeader {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 18vw;
+    width: 22vw;
 }
-nav p{
-    color: #FFFFFF;
-    font-size: 2.5rem;
-    font-family: 'Patua one', serif;
+
+nav p {
+    color: #ffffff;
+    font-size: 2rem;
+    font-family: "Patua one", serif;
 }
+
 nav ul {
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     list-style: none;
     width: 48vw;
     height: 16vh;
 }
+
 nav ul button {
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: transparent;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: none;
 }
+
 nav button:hover {
     transition: 280ms;
     cursor: pointer;
     scale: 1.1;
 }
+
 .primeiraSeçaoMain {
     background-color: #241337;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    min-height: 85vh;   
+    justify-content: space-around;
+    min-height: 65vh;
 }
+
 .artigoTextoPrimeiraSeçao {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    width: 45vw;
+    margin-left: 1rem;
+    margin-bottom: 6.5rem;
 }
-.paragrafoBranco  {
-    color: #FFFFFF;
-    font-size: 4rem;
+
+.paragrafoBranco {
+    color: #ffffff;
+    font-size: 3.5rem;
     white-space: pre-line;
     text-align: left;
 }
+
 .fraseAmarela {
     color: #ffdb53;
-    font-size: 2.5rem;
+    font-size: 2rem;
     display: flex;
     align-items: center;
     height: 6rem;
 }
+
 .listaBotoesPrimeiraSeçao {
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    width:  34vw;
-    height: 16vh;
+    width: 40.5vw;
 }
+
 .botaoRoxo {
-    color: #FFFFFF;
-    background-color: #6731B3;
-    font-size: 1.8rem;
+    color: #ffffff;
+    background-color: #6731b3;
+    font-size: 1.7rem;
     border: none;
     border-radius: 3rem;
-    width: 21rem;
-    height: 4rem;
+    width: 19rem;
+    height: 3.5rem;
 }
+
 .botaoBranco {
-    color: #6731B3;
-    background-color: #FFFFFF;
-    font-size: 1.8rem;
+    color: #6731b3;
+    background-color: #ffffff;
+    font-size: 1.7rem;
     border: none;
     border-radius: 3rem;
-    width: 16rem;
-    height: 4rem;
+    width: 14rem;
+    height: 3.5rem;
 }
+
 .botaoRoxo:hover {
     transition: 280ms;
     cursor: pointer;
     scale: 1.1;
 }
+
 .botaoBranco:hover {
     transition: 280ms;
     cursor: pointer;
     scale: 1.1;
 }
-.segundaSeçaoMain {
-    background-color: #ffffff;
-    min-height: 100vh
+
+.imgVeterinario {
+    width: 400px;
+    height: 420px;
 }
+
+.imgPrancheta {
+    width: 240px;
+}
+
+.segundaSeçaoMain {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    min-height: 85vh;
+}
+
 .artigoTextoSegundaSeçao {
     display: flex;
     flex-direction: column;
@@ -118,15 +150,17 @@ nav button:hover {
     white-space: pre-line;
     height: 45vh;
 }
+
 .tituloRoxo {
-    color: #401A74;
+    color: #401a74;
     font-size: 3rem;
+	font-family: "Patua one", serif;
 }
 
-.paragrafoSublinhado {
+.paragrafoItalico {
     color: rgb(172, 172, 172);
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .artigoImagensSegundaSeçao {
@@ -141,13 +175,14 @@ nav button:hover {
     justify-content: space-around;
     height: 65vh;
     position: relative;
-    width: 340px;
-    height: 480px;
+    width: 280px;
+    height: 400px;
+	margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 .caixaImagens img {
-    display: block;
-    width: 350px;
-    height: 480px;
+    width: 280px;
+    height: 400px;
 }
 
 .caixaSobreposta {
@@ -160,30 +195,55 @@ nav button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.25s;
-}
-
-.caixaSobreposta--blur {
-    backdrop-filter: blur(5px);
-}
-
-.caixaSobreposta>* {
-    transform: translateY(20px);
-    transition: transform 0.25s;
-}
-
-.caixaSobreposta:hover {
     opacity: 1;
 }
-
-.caixaSobreposta:hover>* {
-    transform: translateY(0);
-}
-
 
 .caixaTextos {
     font-size: 2.5rem;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
+}
+
+.terceiraSeçaoMain {
+    background-color: #241333;
+    display: flex;
+	align-items: center;
+	justify-content: space-around;
+    width: 100%;
+    min-height: 70vh;
+}
+
+.terceiraSeçaoMain .tituloSobreNos {
+    color: #ffdb53;
+	font-family: "Patua one", serif;
+    font-size: 3rem;
+}
+
+.terceiraSeçaoMain p {
+    color: #ffffff;
+    white-space: pre-line;
+    font-size: 1.5rem;
+}
+
+.terceiraSeçaoMain img {
+    width: 450;
+	height: 500px;
+}
+
+.botaoAcesseJa {
+    color: #6731b3;
+    background-color: #ffffff;
+    font-family: "Patua one", serif;
+    font-size: 1.7rem;
+    border: none;
+    border-radius: 3rem;
+    width: 19rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;    
+}
+
+.botaoAcesseJa:hover {
+    transition: 280ms;
+    cursor: pointer;
+    scale: 1.1;
 }
