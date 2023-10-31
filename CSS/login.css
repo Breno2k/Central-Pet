@@ -17,9 +17,7 @@ body {
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    width: 14vw;
     height: 16vh;
 }
 
@@ -30,7 +28,7 @@ nav p {
 }
 
 nav img {
-    width: 5rem;
+    width: 70px;
 }
 
 header {
@@ -38,8 +36,18 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 40px 77px;
     display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section-01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #imagem {
