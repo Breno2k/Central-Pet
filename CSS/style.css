@@ -7,6 +7,10 @@
     font-family: "Castoro", serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 nav {
     background-color: #241337;
     display: flex;
@@ -63,7 +67,8 @@ nav button:not(:hover) {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    min-height: 65vh;
+    min-height: 100vh;
+    
 }
 
 .artigoTextoPrimeiraSeçao {
