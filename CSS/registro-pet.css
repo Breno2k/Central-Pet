@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Castoro&family=Palanquin:wght@300&family=Patua+One&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #241337;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 16vh;
+}
+
+nav img {
+    width: 70px;
+}
+
+nav p {
+    color: #ffffff;
+    font-family: "Patua one", serif;
+    font-size: 2rem;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 12vw;
+    height: 6vh;
+    margin-left: 6rem;
+}
+
+body {
+    background-color: #241337;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background-color: #ffffff;
+    width: 90vw;
+    height: 95vh;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+}
+
+main .figuraIcone {
+    background-color: #ffdb53;
+    border-radius: 3rem;
+    width: 10vw;
+    height: 20vh;
+}
+
+main img {
+    border-radius: 8rem;
+}
+
+.figuraPatas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 77vw;
+    margin-top: 2rem;
+    margin-left: 4.8rem;
+}
+
+.figuraPatas img {
+    width: 3vw;
+    border-radius: 0;
+}
+
+.primeiraCaixaMain {
+    display: flex;
+    justify-content: space-around   ;
+    align-items: center;
+    height: 24vh;
+    margin-top: 1rem
+}
+
+.primeiraCaixaMain div {
+    display: flex;
+    flex-direction: column;
+}
+
+.figuraIcone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    background-color: #ffdb53;
+    color: #000000;
+    font-size: 16px;
+    width: 35vw;
+    height: 8vh;
+    border: none;
+    border-radius: 3rem;
+    outline: none;
+    margin-top: 3rem;
+    padding: 1rem
+}
+
+.segundaCaixaMain {
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+}
+
+.caixaEsquerda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 48.5vh;
+}
+
+.caixaDireita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 42vw;
+    height: 48.5vh;
+}   
