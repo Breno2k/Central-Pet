@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/style.css" />
     <link rel="shortcut icon" href="../Imagens/logo-amarela.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/agendamento.css">
     <title>Document</title>
 </head>
 
-<body>
+<body onload="calendario()">
     <header>
         <nav>
             <section class="primeiraSeçaoHeader">
@@ -67,24 +69,120 @@
     </section>
     <section id="processoDeAgendamento">
         <div class="agendamento">
-            <p>Especialidade
-            <select class="select">
-                <option selected></option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </p>
-            <p>Médico Veterinário
-            <select class="select">
-                <option selected></option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </p>
+            <form>
+                <div class="row mb-3">
+                    <label for="" class="col-sm-2 col-form-label"><strong>Especialidade</strong></label>
+                    <div class="col-sm-10">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="1">Consulta NUTRICIONISTA</option>
+                            <option value="2">Consulta DERMATOLOGIA</option>
+                            <option value="3">Consulta UROLOGIA E NEFROLOGIA</option>
+                            <option value="3">Consulta ORTOPEDIA</option>
+                            <option value="3">Consulta CARDIOLOGIA</option>
+                            <option value="3">Consulta CLÍNICO GERAL</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="" class="col-sm-2 col-form-label"><strong>Veterinário</strong></label>
+                    <div class="col-sm-10">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="1">Marina Viera S Melo</option>
+                            <option value="2">Carlos Antônio Junior</option>
+                            <option value="3">Alan Miguel G Santos</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+
+
+            <!--
+              
+
+            </div>
+            <div class="caixaSelect">
+
+            </div> -->
+            <div class="calendario">
+                <table class="table caption-top">
+                    <caption id="mesAtual">Mês fica aq</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Dom</th>
+                            <th scope="col">Seg</th>
+                            <th scope="col">Ter</th>
+                            <th scope="col">Qua</th>
+                            <th scope="col">Qui</th>
+                            <th scope="col">Sex</th>
+                            <th scope="col">Sáb</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="botoes">
+                <div>
+                    <button class="enviar">Enviar</button>
+                    <button class="cancelar"><a href="agendamento.html">Cancelar</a></button>
+                </div>
+            </div>
+
         </div>
     </section>
+
+
+    <script src="../JS/script-agendamento.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
