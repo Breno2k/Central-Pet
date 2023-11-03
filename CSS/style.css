@@ -188,53 +188,106 @@ nav button:not(:hover) {
 
 .caixaImagens {
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
     height: 65vh;
     position: relative;
-    width: 280px;
-    height: 400px;
-	margin-top: 2rem;
+    width: 16vw;
+    height: 42vh;
+    margin-top: 2rem;
     margin-bottom: 4rem;
 }
 .caixaImagens img {
-    width: 280px;
-    height: 400px;
+    width: 16vw;
+    height: 42vh;
 }
+
 
 .caixaSobreposta {
     position: absolute;
+    top: 0;
+    left: 0;    
     width: 100%;
     height: 100%;
-    background: rgba(163, 163, 163, 0.6);
+    background-color: #241337;
     color: #ffffff;
     border-radius: 1.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
+.caixaSobreposta:hover {
     opacity: 1;
 }
 
-.caixaTextos {
+
+.caixaSobreposta > * {
+    transform: translateX(-20px);
+    transition: transform 0.25s;
+}
+
+
+.caixaSobreposta:hover > * {
+    transform: translateX(0);
+}
+
+
+.caixaTextos h1{
     font-size: 2.5rem;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
 }
 
+
+.caixaTextos p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    white-space: pre-line;
+}
+
+
+.botaoImagens {
+    background-color: #ffffff;
+    color: #6731b3;
+    font-family: "Patua one", serif;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 3rem;
+    width: 14rem;
+    height: 3rem;
+    margin-top: 2rem;
+    margin-left: 2.4rem;
+}
+
+
+.botaoImagens:hover {
+    transition: 280ms;
+    cursor: pointer;
+    scale: 1.1;
+}
+
+
 .terceiraSeçaoMain {
     background-color: #241333;
     display: flex;
-	align-items: center;
-	justify-content: space-around;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
     min-height: 70vh;
 }
 
+
 .terceiraSeçaoMain .tituloSobreNos {
     color: #ffdb53;
-	font-family: "Patua one", serif;
+    font-family: "Patua one", serif;
     font-size: 3rem;
 }
+
 
 .terceiraSeçaoMain p {
     color: #ffffff;
@@ -242,14 +295,16 @@ nav button:not(:hover) {
     font-size: 1.5rem;
 }
 
+
 .terceiraSeçaoMain img {
     width: 450;
-	height: 500px;
+    height: 500px;
 }
 
+
 .botaoAcesseJa {
-    color: #6731b3;
     background-color: #ffffff;
+    color: #6731b3;
     font-family: "Patua one", serif;
     font-size: 1.7rem;
     border: none;
@@ -259,17 +314,14 @@ nav button:not(:hover) {
     margin-bottom: 2rem;    
 }
 
+
 .botaoAcesseJa:hover {
     transition: 280ms;
     cursor: pointer;
     scale: 1.1;
 }
 
+
 .botaoAcesseJa:not(:hover) {
     transition: 280ms;
 }
-
-
-/* .segundaSeçaoMain, .terceiraSeçaoMain {
-    visibility: hidden;
-} */
