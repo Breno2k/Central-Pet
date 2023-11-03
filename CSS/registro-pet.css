@@ -33,6 +33,12 @@ a {
     margin-left: 6rem;
 }
 
+.linkHome:hover {
+    transition: 280ms;
+    cursor: pointer;
+    scale: 1.1;
+}
+
 body {
     background-color: #241337;
 }
