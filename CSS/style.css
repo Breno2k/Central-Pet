@@ -325,3 +325,7 @@ nav button:not(:hover) {
 .botaoAcesseJa:not(:hover) {
     transition: 280ms;
 }
+
+/* #caixa-1, #caixa-2, #caixa-3 {
+    visibility: hidden;
+} */

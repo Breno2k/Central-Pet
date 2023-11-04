@@ -17,4 +17,4 @@ ScrollReveal().reveal('#caixa3', {
     origin: '.paragrafoItalico',
     rotate: { x: 80, y: 0, z: 0 },
     distance: '200px' 
-});
+}); /* aas */
