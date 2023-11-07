@@ -72,11 +72,11 @@
         <div class="agendamento">
             <form>
                 <div class="row mb-3">
-                    <label for="select-1" class="col-sm-2 col-form-label"><strong>Especialidade</strong></label>
+                    <label for="select1" class="col-sm-2 col-form-label"><strong>Especialidade</strong></label>
                     <div class="col-sm-10">
-                        <select id="select-1" class="form-select" aria-label="Default select example"
+                        <select id="select1" class="form-select" aria-label="Default select example"
                             onchange="select()">
-                            <option selected>Selecione uma especialidade</option>
+                            <option value="0" selected>Selecione uma especialidade</option>
                             <option value="1">Consulta NUTRICIONISTA</option>
                             <option value="2">Consulta DERMATOLOGIA</option>
                             <option value="4">Consulta UROLOGIA E NEFROLOGIA</option>
@@ -87,9 +87,9 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="select-2" class="col-sm-2 col-form-label"><strong>Veterinário</strong></label>
+                    <label for="select2" class="col-sm-2 col-form-label"><strong>Veterinário</strong></label>
                     <div class="col-sm-10">
-                        <select id="select-2" class="form-select" aria-label="Default select example" disabled>
+                        <select id="select2" class="form-select" aria-label="Default select example" disabled>
                             <option selected></option>
                             <option value="1">Marina Viera S Melo</option>
                             <option value="2">Carlos Antônio Junior</option>
@@ -163,10 +163,24 @@
 
                 </table>
             </div>
+            <div class="container">
+                <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
+                <label class="btn" for="option5">09:00</label>
+
+                <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+                <label class="btn" for="option6">09:30</label>
+
+                <input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off" disabled>
+                <label class="btn" for="option7">10:00</label>
+
+                <input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+                <label class="btn" for="option8">10:30</label>
+            </div>
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 100px"></textarea>
                 <label for="floatingTextarea2">Observações:</label>
-              </div>
+            </div>
             <div id="res">
 
             </div>

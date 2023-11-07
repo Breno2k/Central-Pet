@@ -49,7 +49,7 @@
                 </div>
                 <div class="register">
                     <p>
-                        <a href="create-account.html">criar conta</a>
+                        <a href="create-account.php">criar conta</a>
                     </p>
                 </div>
             </form>

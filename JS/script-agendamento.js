@@ -34,16 +34,14 @@ document.querySelector(".table").addEventListener("click", function(event) {
   }
 });
 
+function select() {
+  var select1 = document.getElementById("select1");
+  var select2 = document.getElementById("select2");
 
-/* function mostrarValor(celula) {
-    
-    if (celula.classList.contains('selected')) {
-        celula.classList.remove('selected');
-      } else {
-        celula.classList.add('selected');
-    }
+  if (select1.value !== 0) {
+    select2.removeAttribute("disabled");
+  } else {
+    select2.setAttribute("disabled", "disabled");
+  }
+}
 
-    var valor = celula.innerHTML;
-    document.getElementById('res').innerHTML = 'Você clicou em: ' + valor;
-
-} */

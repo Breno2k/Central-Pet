@@ -1,7 +1,7 @@
 <?php
     if (isset($_POST['submit'])) {
         
-        include_once('../PHP/config.php');
+        include_once('config.php');
 
         $nomeUsuario = $_POST['nome-usuario'];
         $email = $_POST['email'];
@@ -41,7 +41,6 @@
     <link rel="shortcut icon" href="../Imagens/logo-amarela.png">
 
 </head>
-
 <body>
     <header>
         <nav>

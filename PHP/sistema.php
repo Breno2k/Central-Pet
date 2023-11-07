@@ -2,88 +2,51 @@
     session_start();
     /* print_r($_SESSION); */
 
+    include_once('config.php');
+    
+
     if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
         unset($SESSION['email']);
         unset($SESSION['senha']);
         header('Location: ../html/index.html');
     }
     $logado = $_SESSION['email'];
+
+    $sql = "SELECT `nome-usuario`, `nome-animal`, especie, raca, pelagem, data, sexo, `porte-animal`, Naturalidade FROM `informacoes-pet` WHERE email = '$logado'";
+    
+    
+    $result = $conexao -> query($sql);
+    
+    
+    if ($result) {
+      $row = $result -> fetch_assoc();
+      $nomeUsuario = $row['nome-usuario'];
+      $nomeAnimal = $row['nome-animal'];
+      $especie = $row['especie'];
+      $raca = $row['raca'];
+      $pelagem = $row['pelagem'];
+      $dataNasc = $row['data'];
+      $sexo = $row['sexo'];
+      $portAnimal = $row['porte-animal'];
+      $naturalidade = $row['Naturalidade'];
+    }
+
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema | GN</title>
-    <style>
-        * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        font-family: "Castoro", serif;
-        }
-
-        /* nav-bar */
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        nav {
-            background-color: #241337;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 16vh;
-        }
-
-        nav img {
-            width: 70px;
-        }
-
-        .primeiraSeçaoHeader {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 22vw;
-        }
-
-        nav p {
-            color: #ffffff;
-            font-size: 2rem;
-            font-family: "Patua one", serif;
-        }
-
-        nav ul {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            list-style: none;
-            width: 48vw;
-            height: 16vh;
-        }
-
-        nav ul button {
-            color: #ffffff;
-            background-color: transparent;
-            font-size: 1.5rem;
-            border: none;
-        }
-
-        nav button:hover {
-            transition: 280ms;
-            cursor: pointer;
-            scale: 1.1;
-        }
-
-        nav button:not(:hover) {
-            transition: 280ms;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link rel="shortcut icon" href="../Imagens/logo-amarela.png">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>Central Pet</title>
 </head>
+
 <body>
-<header>
+  <header>
     <nav>
       <section class="primeiraSeçaoHeader">
         <figure>
@@ -99,19 +62,113 @@
           <a href="#seçaoSobreNos">
             <li><button>Sobre Nós</button></li>
           </a>
-          <a href="../HTML/create-account.html">
-            <li><button>Cadastro</button></li>
-          </a>
           <a href="../HTML/login.html">
-            <li><button>Login</button></li>
+            <li><button><?php echo "$nomeUsuario" ?></button></li>
           </a>
         </ul>
       </section>
     </nav>
   </header>
+  <main>
+    <section class="primeiraSeçaoMain">
+      <article class="artigoTextoPrimeiraSeçao">
+        <p class="paragrafoBranco">
+          Protegendo os pets,
+          Educando os donos e
+          Transformando vidas
+        </p>
+        <p class="fraseAmarela">JUNTE-SE A NOSSA COMUNIDADE</p>
+        <ul class="listaBotoesPrimeiraSeçao">
+          <li><button class="botaoRoxo">Comece agora mesmo</button></li>
+          <li><button class="botaoBranco">Nossos serviços</button></li>
+        </ul>
+      </article>
+      <article class="artigoImagensPrimeiraSeçao">
+        <figure>
+          <img class="imgVeterinario" src="../Imagens/veterinario-com-gato.png"
+            alt="Veterinário fazendo carinho em um gato" />
+          <img class="imgPrancheta" src="../Imagens/prancheta.png" alt="Prancheta preenchida com funções do site" />
+        </figure>
+      </article>
+    </section>
+    <section id="seçaoInformaçoes" class="segundaSeçaoMain">
+      <article class="artigoTextoSegundaSeçao">
+        <h1 class="tituloRoxo">
+          Cuide, Ame e Respeite,
+          Seu pet merece o melhor!
+        </h1>
+        <p class="paragrafoItalico">
+          Na Central Pet, cuidamos do bem-estar dos pets, educamos os donos e
+          criamos um mundo onde todos os animais são tratados com amor e respeito.
+          Junte-se a nós nessa jornada de carinho e responsabilidade.
+        </p>
+      </article>
+      <article class="artigoImagensSegundaSeçao">
+        <div class="caixaImagens" id="caixa-1">
+          <img src="../Imagens/img-main1.png" alt="Mulher fazendo carinho no seu cachorro" />
+          <div class="caixaSobreposta">
+            <div class="caixaTextos">
+              <h1>Visualizar Perfil ➔</h1>
+              <p>Crie perfis personalizados para seus animais de estimação, 
+                incluindo nome, raça, idade e etc. Permitindo que os veterinários
+                obtenham informações valiosas sobre seu(s) pet(s).</p>
+              <a href="../HTML/registro-pet.html">
+              <button class="botaoImagens">Acesse Já</button>]
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="caixaImagens" id="caixa-2">
+          <img src="../Imagens/img-main2.png" alt="Veterinária cuidando de um gato" />
+          <div class="caixaSobreposta">
+            <div class="caixaTextos">
+              <h1>Agende sua Consulta ➔</h1>
+              <p>Provemos aos donos de pets a 
+                facilidade de marcar consultas 
+                tanto presencialmente como online. Com um sistema de 
+                agendamento conveniente, simples e acessível.</p>
+              <a href="../HTML/agendamento.html">
+              <button class="botaoImagens">Acesse Já</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="caixaImagens" id="caixa-3">
+          <img src="../Imagens/img-main3.png" alt="Celular recebendo mensagens" />
+          <div class="caixaSobreposta">
+            <div class="caixaTextos">
+              <h1>Comunidade Online ➔</h1>
+              <button class="botaoImagens">Em breve</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="seçaoSobreNos" class="terceiraSeçaoMain">
+      <div>
+        <p>
+          <span class="tituloSobreNos">Sobre Nós ➔</span>
 
-    <?php
-        echo"<h1>Bem vindo $logado</h1>";
-    ?>
+          Na Central Pet, nosso objetivo é promover o bem-estar dos
+          animais de estimação e tornar o mundo um lugar melhor para
+          eles. Fundada por amantes de animais comprometidos com a
+          causa, nossa plataforma tem como objetivo fornecer informações
+          confiáveis, recursos valiosos e uma rede de apoio para donos
+          de pets, veterinários e todos que compartilham o amor pelos
+          animaiszinhos.
+
+          Junte-se a nós nesta missão e faça parte de uma comunidade
+          que valoriza cada patinha, cauda e ronronar.
+
+        </p>
+        <a href="../HTML/create-account.html"><button class="botaoAcesseJa">Acesse Já</button></a>
+      </div>
+      <figure>
+        <img src="../Imagens/veterinaria-com-cachorro.png" alt="Imagem da Logo" />
+      </figure>
+    </section>
+  </main>
+  <script src="../JS/script-index.js"></script>
 </body>
+
 </html>
