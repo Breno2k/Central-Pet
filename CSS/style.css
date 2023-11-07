@@ -66,8 +66,8 @@ nav button:not(:hover) {
     background-color: #241337;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    min-height: 100vh;
+    justify-content: space-evenly;
+    height: 85vh;
     
 }
 
@@ -100,7 +100,7 @@ nav button:not(:hover) {
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    width: 40.5vw;
+    width: 30vw;
 }
 
 .botaoRoxo {
@@ -143,20 +143,26 @@ nav button:not(:hover) {
     transition: 280ms;
 }
 
+.artigoImagensPrimeiraSeçao {
+    width: 42vw;
+    height: 60vh;
+}
+
 .imgVeterinario {
-    width: 400px;
-    height: 420px;
+    width: 24vw;
+    height: 50vh;
 }
 
 .imgPrancheta {
-    width: 240px;
+    width: 16vw;
+    height: 38vh;
 }
 
 .segundaSeçaoMain {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    min-height: 85vh;
+    height: 85vh;
 }
 
 .artigoTextoSegundaSeçao {
@@ -197,11 +203,11 @@ nav button:not(:hover) {
     margin-top: 2rem;
     margin-bottom: 4rem;
 }
+
 .caixaImagens img {
     width: 16vw;
     height: 42vh;
 }
-
 
 .caixaSobreposta {
     position: absolute;
@@ -219,22 +225,25 @@ nav button:not(:hover) {
     transition: opacity 0.5s;
 }
 
-
 .caixaSobreposta:hover {
     opacity: 1;
 }
-
 
 .caixaSobreposta > * {
     transform: translateX(-20px);
     transition: transform 0.25s;
 }
 
-
 .caixaSobreposta:hover > * {
     transform: translateX(0);
 }
 
+.caixaTextos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .caixaTextos h1{
     font-size: 2.5rem;
@@ -242,14 +251,12 @@ nav button:not(:hover) {
     margin-left: 0.5rem;
 }
 
-
 .caixaTextos p {
     font-size: 1.2rem;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
     white-space: pre-line;
 }
-
 
 .botaoImagens {
     background-color: #ffffff;
@@ -261,9 +268,7 @@ nav button:not(:hover) {
     width: 14rem;
     height: 3rem;
     margin-top: 2rem;
-    margin-left: 2.4rem;
 }
-
 
 .botaoImagens:hover {
     transition: 280ms;
@@ -271,16 +276,14 @@ nav button:not(:hover) {
     scale: 1.1;
 }
 
-
 .terceiraSeçaoMain {
     background-color: #241333;
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    min-height: 70vh;
+    height: 70vh;
 }
-
 
 .terceiraSeçaoMain .tituloSobreNos {
     color: #ffdb53;
@@ -288,19 +291,16 @@ nav button:not(:hover) {
     font-size: 3rem;
 }
 
-
 .terceiraSeçaoMain p {
     color: #ffffff;
     white-space: pre-line;
     font-size: 1.5rem;
 }
 
-
 .terceiraSeçaoMain img {
     width: 450;
     height: 500px;
 }
-
 
 .botaoAcesseJa {
     background-color: #ffffff;
@@ -314,18 +314,299 @@ nav button:not(:hover) {
     margin-bottom: 2rem;    
 }
 
-
 .botaoAcesseJa:hover {
     transition: 280ms;
     cursor: pointer;
     scale: 1.1;
 }
 
-
 .botaoAcesseJa:not(:hover) {
     transition: 280ms;
 }
 
-/* #caixa-1, #caixa-2, #caixa-3 {
-    visibility: hidden;
-} */
+@media (width <= 600px) {
+
+    nav img {
+        width: 6vw;
+    }
+
+    .primeiraSeçaoHeader {
+        width: 30vw;
+    }
+
+    nav p {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        width: 64vw;
+    }
+
+    .segundaSeçaoHeader button {
+        font-size: 1rem;
+    }
+
+    .primeiraSeçaoMain {
+        height: 50vh;
+    }
+
+    .paragrafoBranco {
+        font-size: 2rem;
+        width: 56vw;
+    }
+
+    .fraseAmarela {
+        font-size: 1.2rem;
+        width: 56vw;
+    }
+
+    .listaBotoesPrimeiraSeçao {
+        width: 52vw;
+    }
+
+    .botaoRoxo {
+        font-size: 1rem;
+        width: 10.5rem;
+        height: 2.75rem;
+    }
+
+    .botaoBranco {
+        font-size: 1rem;
+        width: 8rem;
+        height: 2.75rem;
+    }
+
+    .artigoImagensPrimeiraSeçao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgVeterinario {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+
+    .imgPrancheta {
+        width: 35vw;
+        height: 35vh;
+    }
+
+    .tituloRoxo {
+        font-size: 2rem;
+    }
+
+    .paragrafoItalico {
+        font-size: 1rem;
+    }
+
+    .segundaSeçaoMain {
+        height: 75vh;
+    }
+
+    .caixaImagens {
+        width: 24vw;
+        height: 38vh;
+        margin-bottom: 2rem;
+    }
+
+    .caixaImagens img {
+        width: 24vw;
+        height: 38vh;
+        border-radius: 1.5rem;
+    }
+
+    .caixaTextos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 24vw;
+        height: 40vh;
+        border-radius: 1.5rem;
+    }
+
+    .caixaTextos h1 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .caixaTextos p {
+        font-size: 0.8rem;
+    }
+
+    .caixaTextos button{
+        font-size: 0.8rem;
+        width: 5rem;
+        height: 2rem;
+    }
+
+    .terceiraSeçaoMain {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .tituloSobreNos {
+        font-size: 1.5rem;
+    }
+
+    .terceiraSeçaoMain p {
+        font-size: 1rem;
+    }
+
+    .terceiraSeçaoMain img {
+        width: 45vw;
+        height: 50vh;
+    }
+
+    .terceiraSeçaoMain button {
+        font-size: 1.5rem;
+        width: 15rem;
+    }
+
+    .caixaEsquerda {
+        margin-left: 1rem;
+    }
+}
+
+@media (width <= 420px) {
+    nav img {
+        width: 6vw;
+    }
+
+    .primeiraSeçaoHeader {
+        width: 30vw;
+    }
+
+    nav p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        width: 64vw;
+    }
+
+    .segundaSeçaoHeader button {
+        font-size: 0.75rem;
+    }
+
+    .primeiraSeçaoMain {
+        height: 45vh;
+    }
+
+    .paragrafoBranco {
+        font-size: 1.3rem;
+        width: 56vw;
+    }
+
+    .fraseAmarela {
+        font-size: 0.8rem;
+        width: 58vw;
+        height: 6vh;
+    }
+
+    .listaBotoesPrimeiraSeçao {
+        width: 54vw;
+    }
+
+    .botaoRoxo {
+        font-size: 0.75rem;
+        width: 6rem;
+        height: 2.75rem;
+    }
+
+    .botaoBranco {
+        font-size: 0.75rem;
+        width: 7rem;
+        height: 2.75rem;
+    }
+
+    .artigoImagensPrimeiraSeçao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgVeterinario {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+
+    .imgPrancheta {
+        width: 32vw;
+        height: 24vh;
+        margin-left: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .tituloRoxo {
+        font-size: 1.5rem;
+    }
+
+    .paragrafoItalico {
+        font-size: 0.65rem;
+    }
+
+    .segundaSeçaoMain {
+        height: 65vh;
+    }
+
+    .caixaImagens {
+        width: 28vw;
+        height: 30vh;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .caixaImagens img {
+        width: 28vw;
+        height: 30vh;
+        border-radius: 2rem;
+    }
+
+    .caixaTextos h1 {
+        font-size: 0.875rem;
+        margin-top: 1rem;
+    }
+
+    .caixaTextos p {
+        font-size: 0.425rem;
+    }
+
+    .caixaTextos button{
+        font-size: 0.65rem;
+        margin-top: 0.5rem;
+        width: 4rem;
+        height: 1.5rem;
+    }
+
+    .terceiraSeçaoMain {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 50vh;
+    }
+
+    .terceiraSeçaoMain .tituloSobreNos {
+        font-size: 1.5rem;
+    }
+
+    .terceiraSeçaoMain p {
+        font-size: 0.75rem;
+    }
+
+    .terceiraSeçaoMain img {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .terceiraSeçaoMain button {
+        font-size: 1rem;
+        width: 12rem;
+        height: 2.5rem;
+    }
+}

@@ -26,27 +26,32 @@
     </header>
     <section id="section-02">
         <div id="imagem">
-            <img src="../Imagens/veterinario.png" alt="">
+            <img src="../Imagens/vererinaria.png" alt="">
         </div>
     </section>
     <section id="section-03">
         <div class="login">
-            <form action="">
+            <form action="../PHP/teste-login.php" method="POST">
                 <img src="../Imagens/logo-amarela.png" alt=""></br>
-                <div id="input-box-02" class="input-box">
-                    <input type="text" name="nome" id="nome" placeholder="Nome">
-                </div>
-                <div id="input-box-02" class="input-box">
+                <div class="input-box">
                     <input type="email" name="email" id="email" placeholder="Email">
+                    <i class='bx bx-user'></i>
                 </div>
-                <div id="input-box-02" class="input-box">
+                <div class="input-box">
                     <input type="password" name="senha" id="senha" placeholder="Senha">
                     <i class='bx bx-lock-alt'></i>
                 </div>
-                <div id="input-box-02" class="input-box">
-                    <input type="password" name="confirmar-senha" id="senha" placeholder="Confirmar senha">
+                <input class="btn" type="submit" name="submit" value="Enviar">
+                <div class="register">
+                    <p>
+                        <a href="#">esqueceu a senha</a>
+                    </p>
                 </div>
-                <button type="submit" class="btn">CONFIRMAR</button>
+                <div class="register">
+                    <p>
+                        <a href="create-account.html">criar conta</a>
+                    </p>
+                </div>
             </form>
         </div>
     </section>
