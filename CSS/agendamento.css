@@ -157,6 +157,10 @@ td {
     border-radius: 15px;
 }
 
+.desable {
+    background-color: yellow;
+}
+
 .trans {
     background-color: #474747;
 }

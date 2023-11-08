@@ -89,7 +89,7 @@
                 <div class="row mb-3">
                     <label for="select2" class="col-sm-2 col-form-label"><strong>Veterinário</strong></label>
                     <div class="col-sm-10">
-                        <select id="select2" class="form-select" aria-label="Default select example" disabled>
+                        <select id="select2" class="form-select" aria-label="Default select example" onchange="select()">
                             <option selected></option>
                             <option value="1">Marina Viera S Melo</option>
                             <option value="2">Carlos Antônio Junior</option>
@@ -123,9 +123,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>29</td>
-                                <td>30</td>
-                                <td>31</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td>1</td>
                                 <td>2</td>
                                 <td>3</td>
@@ -152,18 +152,18 @@
                             <tr>
                                 <td>19</td>
                                 <td>30</td>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </div>
 
                 </table>
             </div>
-            <div class="container">
+            <div class="container p-4">
                 <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
                 <label class="btn" for="option5">09:00</label>
 
@@ -175,22 +175,36 @@
 
                 <input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
                 <label class="btn" for="option8">10:30</label>
-            </div>
-            <div class="form-floating">
+            </div> <!-- radio -->
+            <div class="form-floating p-2">
                 <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
                     style="height: 100px"></textarea>
                 <label for="floatingTextarea2">Observações:</label>
-            </div>
-            <div id="res">
-
-            </div>
+            </div> <!-- obs -->
             <div class="botoes">
-                <div>
-                    <button class="enviar">Enviar</button>
-                    <button class="cancelar"><a href="agendamento.html">Cancelar</a></button>
+                <!-- Button trigger modal -->
+                <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Confirmar</button>
+                <button class="cancelar"><a href="agendamento.html">Cancelar</a></button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Janela de confimação</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="res" class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                            <button type="button" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </section>
 

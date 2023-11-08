@@ -10,6 +10,26 @@ function calendario() {
     mesAtual.textContent = `${nomeMes} ${anoHoje}`;
 }
 
+/* select */
+
+function select() {
+  var select1 = document.getElementById("select1");
+  var select2 = document.getElementById("select2");
+  var res = document.getElementById('res');
+
+  var selectedIndex1 = select1.selectedIndex;
+  var selectedIndex2 = select2.selectedIndex;
+  var selectedOptionText1 = select1.options[selectedIndex1].text;
+  var selectedOptionText2 = select2.options[selectedIndex2].text;
+
+  res.innerHTML = "Especialidade: " + selectedOptionText1 + "<br>";
+  res.innerHTML += " Veterinário: " + selectedOptionText2;
+}
+
+
+
+
+
 /* marcação de data do calendário */
 
 let highlightedElement = null;
@@ -30,18 +50,6 @@ document.querySelector(".table").addEventListener("click", function(event) {
     highlightedElement = event.target;
 
     // Atualize a div de saída com o valor do elemento clicado
-    document.getElementById("res").textContent = "Você marcou para o dia: " + event.target.textContent;
+    document.getElementById("res").innerHTML += "<br>Você marcou para o dia: " + event.target.textContent;
   }
 });
-
-function select() {
-  var select1 = document.getElementById("select1");
-  var select2 = document.getElementById("select2");
-
-  if (select1.value !== 0) {
-    select2.removeAttribute("disabled");
-  } else {
-    select2.setAttribute("disabled", "disabled");
-  }
-}
-

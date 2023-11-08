@@ -161,14 +161,37 @@
           que valoriza cada patinha, cauda e ronronar.
 
         </p>
-        <a href="../HTML/create-account.html"><button class="botaoAcesseJa">Acesse Já</button></a>
+        <a href="create-acconunt.php"><button class="botaoAcesseJa">Acesse Já</button></a>
       </div>
       <figure>
         <img src="../Imagens/veterinaria-com-cachorro.png" alt="Imagem da Logo" />
       </figure>
     </section>
   </main>
-  <script src="../JS/script-index.js"></script>
+  <script>
+
+    window.sr = ScrollReveal({ reset: true });
+
+    ScrollReveal().reveal('#caixa-1', {
+        duration: 2500,
+        origin: '.paragrafoItalico',
+        rotate: { x: 80, y: 0, z: 0 },
+        distance: '200px',
+    });
+    ScrollReveal().reveal('#caixa-2', {
+        duration: 2750,
+        origin: '.paragrafoItalico',
+        rotate: { x: 80, y: 0, z: 0 },
+        distance: '200px' 
+    });
+    ScrollReveal().reveal('#caixa-3', {
+        duration: 3000,
+        origin: '.paragrafoItalico',
+        rotate: { x: 80, y: 0, z: 0 },
+        distance: '200px' 
+    });
+    
+  </script>
 </body>
 
 </html>
