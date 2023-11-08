@@ -89,66 +89,86 @@
                     <div class="caixaEsquerda">
                         <div>
                             <p class="tituloCaixa">Nome do animal:</p>
-                            <p class="caixaAmarela"><?php echo "$nomeAnimal" ?></p>
+                            <div class="caixaAmarela">
+                                <p><?php echo "$nomeAnimal" ?></p>
+                            </div>
                         </div>
                         <div>
                             <p class="tituloCaixa">Raça:</p>
-                            <p class="caixaAmarela"><?php echo "$raca" ?></p>
+                            <div class="caixaAmarela">
+                                <p><?php echo "$raca" ?></p>
+                            </div>
                         </div>
                         <div>
                             <p class="tituloCaixa">Data de nascimento:</p>
-                            <p class="caixaAmarela"><?php echo "$dataNasc" ?></p>
+                            <div class="caixaAmarela">
+                                <p><?php echo "$dataNasc" ?></p>
+                            </div>
                         </div>
                         <div>
                             <p class="tituloCaixa">Porte do animal:</p>
-                            <p class="caixaAmarela"><?php echo "$portAnimal" ?></p>
+                            <div class="caixaAmarela">
+                                <p><?php echo "$portAnimal" ?></p>
+                            </div>
                         </div>
                         <div>
                             <p class="tituloCaixa">Nome do responsável:</p>
-                            <p id="ultimaCaixa" class="caixaAmarela"><?php echo "$nomeUsuario" ?></p>
+                            <div id="ultimaCaixa" class="caixaAmarela">
+                                <p><?php echo "$nomeUsuario" ?></p>
+                            </div>
                         </div>
                     </div>
                     <div class="caixaDireita">
                         <div>
                             <p class="tituloCaixa">Espécie:</p>
-                            <p class="caixaAmarela"><?php echo "$especie" ?></p>
+                            <div class="caixaAmarela">
+                                <p><?php echo "$especie" ?></p>
+                            </div>
                         </div>
                         <div>
                             <p class="tituloCaixa">Pelagem do animal:</p>
-                            <p class="caixaAmarela"><?php echo "$pelagem" ?></p>
+                            <div class="caixaAmarela">
+                                <p><?php echo "$pelagem" ?></p>
+                            </div>
                         </div>
                         <div>
                             <p class="tituloCaixa">Sexo:</p>
-                            <p class="caixaAmarela"><?php echo "$sexo" ?></p>
+                            <div class="caixaAmarela">
+                                <p><?php echo "$sexo" ?></p>
+                            </div>
                         </div>
                         <div>
                             <p class="tituloCaixa">Naturalidade:</p>
-                            <p class="caixaAmarela"><?php echo "$naturalidade" ?></p>
+                            <div class="caixaAmarela">
+                                <p><?php echo "$naturalidade" ?></p>
+                            </div>
                         </div>
                         <div>
                             <p class="tituloCaixa">Telefone/Celular:</p>
-                            <p id="ultimaCaixa" class="caixaAmarela"><?php echo "" ?></p>
+                            <div id="ultimaCaixa" class="caixaAmarela">
+                                <p><?php echo "" ?></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                </form>
-                <div>
-                    <figure class="figuraPatas">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                    </figure>
-                </div>
+            </form>
+            <div>
+                <figure class="figuraPatas">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                </figure>
+            </div>
         </section>
     </main>
     <footer>
