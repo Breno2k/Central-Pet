@@ -112,7 +112,7 @@
               <p>Crie perfis personalizados para seus animais de estimação, 
                 incluindo nome, raça, idade e etc. Permitindo que os veterinários
                 obtenham informações valiosas sobre seu(s) pet(s).</p>
-              <a href="../HTML/registro-pet.html">
+              <a href="registro-pet.php">
               <button class="botaoImagens">Acesse Já</button>]
               </a>
             </div>

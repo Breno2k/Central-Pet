@@ -1,21 +1,34 @@
 <?php
-    if (isset($_POST['submit'])) {
+    session_start();
+    /* print_r($_SESSION); */
 
-        include_once('../PHP/config.php');
+    include_once('config.php');
+    
 
-        $nomeAnimal = $_POST['nome-do-animal'];
-        $especie = $_POST['especie'];
-        $raca = $_POST['raca'];
-        $pelagem = $_POST['pelagem-do-animal'];
-        $dataNasc = $_POST['data-de-nascimento'];
-        $sexo = $_POST['sexo'];
-        $portAnimal = $_POST['porte-do-animal'];
-        $naturalidade = $_POST['naturalidade'];
-        $nomeRespon = $_POST['nome-do-responsavel'];
-        $telefoneCelular = $_POST['telefone-celular'];
+    if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
+        unset($SESSION['email']);
+        unset($SESSION['senha']);
+        header('Location: ../html/index.html');
+    }
+    $logado = $_SESSION['email'];
 
-        $result = mysqli_query($conexao, "INSERT INTO `informacoes-pet` (`nome-animal`, especie, raca, pelagem, data, sexo, `porte-animal`, Naturalidade, `nome-responsavel`, telefone) VALUES ('$nomeAnimal', '$especie', '$raca', '$pelagem', '$dataNasc', '$sexo', '$portAnimal', '$naturalidade', '$nomeRespon', '$telefoneCelular')");
-        
+    $sql = "SELECT `nome-usuario`, `nome-animal`, especie, raca, pelagem, data, sexo, `porte-animal`, Naturalidade FROM `informacoes-pet` WHERE email = '$logado'";
+    
+    
+    $result = $conexao -> query($sql);
+    
+    
+    if ($result) {
+      $row = $result -> fetch_assoc();
+      $nomeUsuario = $row['nome-usuario'];
+      $nomeAnimal = $row['nome-animal'];
+      $especie = $row['especie'];
+      $raca = $row['raca'];
+      $pelagem = $row['pelagem'];
+      $dataNasc = $row['data'];
+      $sexo = $row['sexo'];
+      $portAnimal = $row['porte-animal'];
+      $naturalidade = $row['Naturalidade'];
     }
 ?>
 
@@ -46,11 +59,8 @@
                   <a href="#seçaoSobreNos">
                     <li><button>Sobre Nós</button></li>
                   </a>
-                  <a href="../HTML/create-account.html">
-                    <li><button>Cadastro</button></li>
-                  </a>
-                  <a href="../HTML/login.html">
-                    <li><button>Login</button></li>
+                  <a href="">
+                    <li><button><?php echo "$nomeUsuario" ?></button></li>
                   </a>
                 </ul>
               </section>
@@ -79,45 +89,45 @@
                     <div class="caixaEsquerda">
                         <div>
                             <p class="tituloCaixa">Nome do animal:</p>
-                            <p class="caixaAmarela"></p>
+                            <p class="caixaAmarela"><?php echo "$nomeAnimal" ?></p>
                         </div>
                         <div>
                             <p class="tituloCaixa">Raça:</p>
-                            <p class="caixaAmarela"></p>
+                            <p class="caixaAmarela"><?php echo "$raca" ?></p>
                         </div>
                         <div>
                             <p class="tituloCaixa">Data de nascimento:</p>
-                            <p class="caixaAmarela"></p>
+                            <p class="caixaAmarela"><?php echo "$dataNasc" ?></p>
                         </div>
                         <div>
                             <p class="tituloCaixa">Porte do animal:</p>
-                            <p class="caixaAmarela"></p>
+                            <p class="caixaAmarela"><?php echo "$portAnimal" ?></p>
                         </div>
                         <div>
                             <p class="tituloCaixa">Nome do responsável:</p>
-                            <p id="ultimaCaixa" class="caixaAmarela"></p>
+                            <p id="ultimaCaixa" class="caixaAmarela"><?php echo "$nomeUsuario" ?></p>
                         </div>
                     </div>
                     <div class="caixaDireita">
                         <div>
                             <p class="tituloCaixa">Espécie:</p>
-                            <p class="caixaAmarela"></p>
+                            <p class="caixaAmarela"><?php echo "$especie" ?></p>
                         </div>
                         <div>
                             <p class="tituloCaixa">Pelagem do animal:</p>
-                            <p class="caixaAmarela"></p>
+                            <p class="caixaAmarela"><?php echo "$pelagem" ?></p>
                         </div>
                         <div>
                             <p class="tituloCaixa">Sexo:</p>
-                            <p class="caixaAmarela"></p>
+                            <p class="caixaAmarela"><?php echo "$sexo" ?></p>
                         </div>
                         <div>
                             <p class="tituloCaixa">Naturalidade:</p>
-                            <p class="caixaAmarela"></p>
+                            <p class="caixaAmarela"><?php echo "$naturalidade" ?></p>
                         </div>
                         <div>
                             <p class="tituloCaixa">Telefone/Celular:</p>
-                            <p id="ultimaCaixa" class="caixaAmarela"></p>
+                            <p id="ultimaCaixa" class="caixaAmarela"><?php echo "" ?></p>
                         </div>
                     </div>
                 </div>
