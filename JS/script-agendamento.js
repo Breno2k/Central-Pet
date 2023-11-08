@@ -26,30 +26,57 @@ function select() {
   res.innerHTML += " Veterinário: " + selectedOptionText2;
 }
 
-
-
-
-
 /* marcação de data do calendário */
 
 let highlightedElement = null;
 
-// Adicione um ouvinte de eventos para toda a tabela
 document.querySelector(".table").addEventListener("click", function(event) {
-  // Verifique se o elemento clicado é uma célula da tabela
   if (event.target.tagName === "TD") {
-    // Remove a cor de fundo do elemento anteriormente destacado, se houver um
+
     if (highlightedElement) {
       highlightedElement.style.backgroundColor = "";
     }
 
-    // Altere a cor de fundo da célula clicada
     event.target.style.backgroundColor = "lightblue";
-
-    // Defina o elemento atualmente destacado como o elemento clicado
+    
     highlightedElement = event.target;
-
-    // Atualize a div de saída com o valor do elemento clicado
-    document.getElementById("res").innerHTML += "<br>Você marcou para o dia: " + event.target.textContent;
+    
+    document.getElementById("res").innerHTML += "<br>Você marcou para o dia: " + event.target.textContent + " de novembro de 2023";
   }
+});
+
+/* input radio */
+
+var radioButtons = document.querySelectorAll('.btn-check');
+
+
+radioButtons.forEach(function(radioButton) {
+  radioButton.addEventListener('change', function() {
+    
+    if (radioButton.checked) {
+      
+      res.innerHTML += "<br>Horário selecionado: " + radioButton.nextElementSibling.textContent;
+    }
+  });
+});
+
+/* obs */
+
+var textarea = document.getElementById('floatingTextarea2');
+var previousText = "";
+
+
+textarea.addEventListener('input', function() {
+    var currentText = textarea.value;
+    
+    if (currentText !== previousText) {
+        
+        var newParagraph = document.createElement('p');
+        newParagraph.textContent = "Observações: " + currentText;
+
+        
+        res.appendChild(newParagraph);
+        
+        previousText = currentText;
+    }
 });

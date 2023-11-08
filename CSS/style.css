@@ -192,7 +192,7 @@ nav button:not(:hover) {
     justify-content: space-around;
 }
 
-#caixa-1, #caixa-2, #caixa-3 {
+#caixa1, #caixa2, #caixa3 {
     visibility: hidden;
 }
 
@@ -486,5 +486,4 @@ footer p {
     footer p {
         font-size: 0.875rem;
     }
-}
 }

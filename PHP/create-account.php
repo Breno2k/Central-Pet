@@ -113,11 +113,13 @@
                         <i class='bx bx-lock-alt'></i>
                     </div>                    
                 </div>
-                <input class="btn" type="submit" name="submit" value="CONFIRMAR">
+                <a href="login.php">
+                    <input class="btn" type="submit" name="submit" value="CONFIRMAR">                    
+                </a>
+
             </form>
         </div>
     </section>
-
 </body>
 
 </html>

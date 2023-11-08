@@ -213,3 +213,11 @@ a {
     text-decoration: none;
     color: black;
 }
+
+footer {
+    height: 8vh;
+}
+
+footer p {
+    font-size: 0.875rem;
+}

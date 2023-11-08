@@ -44,7 +44,7 @@
     <header>
         <nav>
             <section class="primeiraSeçaoHeader">
-                <a href="../HTML/index.html">
+                <a href="sistema.php">
                     <figure>
                     <img src="../Imagens/logo-amarela.png" alt="Imagem da Logo" />
                     </figure>
@@ -146,7 +146,7 @@
                         <div>
                             <p class="tituloCaixa">Telefone/Celular:</p>
                             <div id="ultimaCaixa" class="caixaAmarela">
-                                <p><?php echo "" ?></p>
+                                <p>(88) 88888-8888</p>
                             </div>
                         </div>
                     </div>

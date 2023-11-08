@@ -104,7 +104,7 @@
         </p>
       </article>
       <article class="artigoImagensSegundaSeçao">
-        <div class="caixaImagens" id="caixa-1">
+        <div class="caixaImagens" id="caixa1">
           <img src="../Imagens/img-main1.png" alt="Mulher fazendo carinho no seu cachorro" />
           <div class="caixaSobreposta">
             <div class="caixaTextos">
@@ -118,7 +118,7 @@
             </div>
           </div>
         </div>
-        <div class="caixaImagens" id="caixa-2">
+        <div class="caixaImagens" id="caixa2">
           <img src="../Imagens/img-main2.png" alt="Veterinária cuidando de um gato" />
           <div class="caixaSobreposta">
             <div class="caixaTextos">
@@ -133,7 +133,7 @@
             </div>
           </div>
         </div>
-        <div class="caixaImagens" id="caixa-3">
+        <div class="caixaImagens" id="caixa3">
           <img src="../Imagens/img-main3.png" alt="Celular recebendo mensagens" />
           <div class="caixaSobreposta">
             <div class="caixaTextos">
@@ -172,19 +172,19 @@
 
     window.sr = ScrollReveal({ reset: true });
 
-    ScrollReveal().reveal('#caixa-1', {
+    ScrollReveal().reveal('#caixa1', {
         duration: 2500,
         origin: '.paragrafoItalico',
         rotate: { x: 80, y: 0, z: 0 },
         distance: '200px',
     });
-    ScrollReveal().reveal('#caixa-2', {
+    ScrollReveal().reveal('#caixa2', {
         duration: 2750,
         origin: '.paragrafoItalico',
         rotate: { x: 80, y: 0, z: 0 },
         distance: '200px' 
     });
-    ScrollReveal().reveal('#caixa-3', {
+    ScrollReveal().reveal('#caixa3', {
         duration: 3000,
         origin: '.paragrafoItalico',
         rotate: { x: 80, y: 0, z: 0 },
@@ -192,6 +192,9 @@
     });
     
   </script>
+  <footer>
+    <p>Central Pet © 2023</p>
+  </footer>
 </body>
 
 </html>
