@@ -120,12 +120,16 @@ main img {
 
 .caixasMain .caixaAmarela {
     background-color: #ffdb53;
+    display: flex;
+    align-items: center;
     width: 40vw;
     height: 6vh;
-    border: none;
     border-radius: 3rem;
-    outline: none;
     margin-bottom: 2rem;
+}
+
+.caixaAmarela p {
+    margin-left: 1rem;
 }
 
 #ultimaCaixa {
