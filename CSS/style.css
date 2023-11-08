@@ -328,151 +328,17 @@ nav button:not(:hover) {
     transition: 280ms;
 }
 
-@media (width <= 600px) {
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffd84b;
+    height: 12vh;
+}
 
-    nav img {
-        width: 6vw;
-    }
-
-    .primeiraSeçaoHeader {
-        width: 30vw;
-    }
-
-    nav p {
-        font-size: 1.2rem;
-    }
-
-    nav ul {
-        width: 64vw;
-    }
-
-    .segundaSeçaoHeader button {
-        font-size: 1rem;
-    }
-
-    .primeiraSeçaoMain {
-        height: 50vh;
-    }
-
-    .paragrafoBranco {
-        font-size: 2rem;
-        width: 56vw;
-    }
-
-    .fraseAmarela {
-        font-size: 1.2rem;
-        width: 56vw;
-    }
-
-    .listaBotoesPrimeiraSeçao {
-        width: 52vw;
-    }
-
-    .botaoRoxo {
-        font-size: 1rem;
-        width: 10.5rem;
-        height: 2.75rem;
-    }
-
-    .botaoBranco {
-        font-size: 1rem;
-        width: 8rem;
-        height: 2.75rem;
-    }
-
-    .artigoImagensPrimeiraSeçao {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .imgVeterinario {
-        visibility: hidden;
-        width: 0px;
-        height: 0px;
-    }
-
-    .imgPrancheta {
-        width: 35vw;
-        height: 35vh;
-    }
-
-    .tituloRoxo {
-        font-size: 2rem;
-    }
-
-    .paragrafoItalico {
-        font-size: 1rem;
-    }
-
-    .segundaSeçaoMain {
-        height: 75vh;
-    }
-
-    .caixaImagens {
-        width: 24vw;
-        height: 38vh;
-        margin-bottom: 2rem;
-    }
-
-    .caixaImagens img {
-        width: 24vw;
-        height: 38vh;
-        border-radius: 1.5rem;
-    }
-
-    .caixaTextos {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 24vw;
-        height: 40vh;
-        border-radius: 1.5rem;
-    }
-
-    .caixaTextos h1 {
-        font-size: 1rem;
-        margin-top: 1rem;
-    }
-
-    .caixaTextos p {
-        font-size: 0.8rem;
-    }
-
-    .caixaTextos button{
-        font-size: 0.8rem;
-        width: 5rem;
-        height: 2rem;
-    }
-
-    .terceiraSeçaoMain {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .tituloSobreNos {
-        font-size: 1.5rem;
-    }
-
-    .terceiraSeçaoMain p {
-        font-size: 1rem;
-    }
-
-    .terceiraSeçaoMain img {
-        width: 45vw;
-        height: 50vh;
-    }
-
-    .terceiraSeçaoMain button {
-        font-size: 1.5rem;
-        width: 15rem;
-    }
-
-    .caixaEsquerda {
-        margin-left: 1rem;
-    }
+footer p {
+    font-size: 1.5rem;
+    font-family: "Patua one", serif;
 }
 
 @media (width <= 420px) {
@@ -613,4 +479,12 @@ nav button:not(:hover) {
         width: 12rem;
         height: 2.5rem;
     }
+    footer {
+        height: 8vh;
+    }
+
+    footer p {
+        font-size: 0.875rem;
+    }
+}
 }

@@ -9,14 +9,38 @@
 nav {
     background-color: #241337;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: space-between;
     height: 16vh;
-}
+}   
 
 nav img {
     width: 3vw;
 }
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    width: 48vw;
+    height: 16vh;
+}
+
+nav ul button {
+    color: #ffffff;
+    background-color: transparent;
+    font-family: "Castoro", serif;
+    font-size: 1.5rem;
+    border: none;
+}
+
+nav button:hover {
+    transition: 280ms;
+    cursor: pointer;
+    scale: 1.1;
+}
+
 
 nav p {
     color: #ffffff;
@@ -33,7 +57,14 @@ a {
     margin-left: 6rem;
 }
 
-.linkHome:hover {
+.primeiraSeçaoHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22vw;
+}
+
+.primeiraSeçaoHeader:hover {
     transition: 280ms;
     cursor: pointer;
     scale: 1.1;
@@ -49,12 +80,11 @@ main {
     align-items: center;
 }
 
-section {
+.seçaoFormulario {
     background-color: #ffffff;
     width: 90vw;
-    height: 90vh;
+    height: 80vh;
     border-radius: 3rem;
-    margin-bottom: 2rem;
 }
 
 main .figuraIcone {
@@ -70,28 +100,16 @@ main img {
 
 .figuraPatas {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     width: 90vw;
-    margin-top: 2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.75rem;
 }
 
 .figuraPatas img {
     width: 3vw;
     border-radius: 0;
-}
-
-.primeiraCaixaMain {
-    display: flex;
-    justify-content: space-around   ;
-    align-items: center;
-    height: 24vh;
-    margin-top: 1rem
-}
-
-.primeiraCaixaMain div {
-    display: flex;
-    flex-direction: column;
 }
 
 .figuraIcone {
@@ -100,22 +118,25 @@ main img {
     align-items: center;
 }
 
-input {
+.caixasMain .caixaAmarela {
     background-color: #ffdb53;
-    color: #000000;
-    font-size: 16px;
-    width: 35vw;
-    height: 8vh;
+    width: 40vw;
+    height: 6vh;
     border: none;
     border-radius: 3rem;
     outline: none;
-    margin-top: 3rem;
-    padding: 1rem
+    margin-bottom: 2rem;
 }
 
-.segundaCaixaMain {
+#ultimaCaixa {
+    margin-bottom: 0rem;
+}
+
+.caixasMain {
+    font-size: 1.4rem;
+    font-family: "Castoro", serif;
     display: flex;
-    justify-content:  center;
+    justify-content:  space-evenly;
     align-items: center;
 }
 
@@ -124,16 +145,31 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40vw;
-    height: 48.5vh;
+    width: 45vw;
+    height: 60vh;
 }
 
 .caixaDireita {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 42vw;
-    height: 48.5vh;
+    align-items: center;
+    width: 45vw;
+    height: 60vh;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffd84b;
+    height: 10vh;
+    margin-top: 2.4rem;
+}
+
+footer p {
+    font-size: 1.5rem;
+    font-family: "Patua one", serif;
 }
 
 @media (width <= 420px) {
@@ -156,6 +192,15 @@ input {
         align-items: center;
     }
 
+    section {
+        height: 62vh;
+        border-radius: 1.5rem;
+    }
+
+    .caixasMain {
+        height: 48vh;
+    }
+
     .figuraPatas img {
         width: 3.75vw;
     }
@@ -164,8 +209,11 @@ input {
         width: 4vw;
     }
 
-    input {
-        font-size: 0.6rem;
-        margin-top: 2rem;
+    .caixasMain .tituloCaixa {
+        font-size: 0.65rem;
+    }
+
+    .caixasMain .caixaAmarela {
+        height: 1.5rem;
     }
 }

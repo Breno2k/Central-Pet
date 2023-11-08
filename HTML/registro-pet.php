@@ -30,76 +30,119 @@
 <body>
     <header>
         <nav>
-            <a href="../HTML/index.html" class="linkHome">
-                <figure>
+            <section class="primeiraSeçaoHeader">
+                <a href="../HTML/index.html">
+                    <figure>
                     <img src="../Imagens/logo-amarela.png" alt="Imagem da Logo" />
-                </figure>
-                <p>Central Pet</p>
-            </a>
+                    </figure>
+                    <p>Central Pet</p>
+                </a>
+              </section>
+              <section class="segundaSeçaoHeader">
+                <ul>
+                  <a href="#seçaoInformaçoes">
+                    <li><button>Informações</button></li>
+                  </a>
+                  <a href="#seçaoSobreNos">
+                    <li><button>Sobre Nós</button></li>
+                  </a>
+                  <a href="../HTML/create-account.html">
+                    <li><button>Cadastro</button></li>
+                  </a>
+                  <a href="../HTML/login.html">
+                    <li><button>Login</button></li>
+                  </a>
+                </ul>
+              </section>
         </nav>
     </header>
     <main>
         <section class="seçaoFormulario">
-            <figure class="figuraPatas">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-            </figure>
+            <div>
+                <figure class="figuraPatas">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+            </div>
             <form action="registro-pet.php" method="POST">
-                <div class="primeiraCaixaMain">
-                    <figure class="figuraIcone">
-                        <img src="" alt="teste">
-                    </figure>
-                    <div>
-                        <input type="text" name="nome-do-animal" id="nome-do-animal" placeholder="Nome do animal">
-                        <input type="text" name="especie" id="especie" placeholder="Espécie">
-                    </div>
-                </div>
-                <div class="segundaCaixaMain">
+                <div class="caixasMain">
                     <div class="caixaEsquerda">
-                        <input type="text" name="raca" id="raça" placeholder="Raça">
-                        <input type="text" name="data-de-nascimento" id="data-de-nascimento" placeholder="Data de nascimento">
-                        <input type="text" name="porte-do-animal" id="porte-do-animal" placeholder="Porte do animal">
-                        <input type="text" name="nome-do-responsavel" id="nome-do-responsavel" placeholder="Nome do responsável">
+                        <div>
+                            <p class="tituloCaixa">Nome do animal:</p>
+                            <p class="caixaAmarela"></p>
+                        </div>
+                        <div>
+                            <p class="tituloCaixa">Raça:</p>
+                            <p class="caixaAmarela"></p>
+                        </div>
+                        <div>
+                            <p class="tituloCaixa">Data de nascimento:</p>
+                            <p class="caixaAmarela"></p>
+                        </div>
+                        <div>
+                            <p class="tituloCaixa">Porte do animal:</p>
+                            <p class="caixaAmarela"></p>
+                        </div>
+                        <div>
+                            <p class="tituloCaixa">Nome do responsável:</p>
+                            <p id="ultimaCaixa" class="caixaAmarela"></p>
+                        </div>
                     </div>
                     <div class="caixaDireita">
-                        <input type="text" name="pelagem-do-animal" id="pelagem-do-animal" placeholder="Pelagem do animal">
-                        <input type="text" name="sexo" id="sexo" placeholder="Sexo">
-                        <input type="text" name="naturalidade" id="naturalidade" placeholder="Naturalidade">
-                        <input type="text" name="telefone-celular" id="telefone-celular" placeholder="Telefone/celular">
+                        <div>
+                            <p class="tituloCaixa">Espécie:</p>
+                            <p class="caixaAmarela"></p>
+                        </div>
+                        <div>
+                            <p class="tituloCaixa">Pelagem do animal:</p>
+                            <p class="caixaAmarela"></p>
+                        </div>
+                        <div>
+                            <p class="tituloCaixa">Sexo:</p>
+                            <p class="caixaAmarela"></p>
+                        </div>
+                        <div>
+                            <p class="tituloCaixa">Naturalidade:</p>
+                            <p class="caixaAmarela"></p>
+                        </div>
+                        <div>
+                            <p class="tituloCaixa">Telefone/Celular:</p>
+                            <p id="ultimaCaixa" class="caixaAmarela"></p>
+                        </div>
                     </div>
-                </div> 
-                <input type="submit" name="submit" id="submit">               
-            </form>
-
-            <figure class="figuraPatas">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-                <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
-            </figure>
+                </div>
+                </form>
+                <div>
+                    <figure class="figuraPatas">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                        <img src="../Imagens/pata-amarela.png" alt="Imagem de uma pata amarela">
+                    </figure>
+                </div>
         </section>
     </main>
+    <footer>
+        <p>Central Pet © 2023</p>
+    </footer>
 </body>
 </html>
